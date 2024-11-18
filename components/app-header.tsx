@@ -17,7 +17,7 @@ export const Header = () => {
           className="rounded-full"
         />
         <h1 className="tracking-wide text-2xl font-semibold mr-auto">
-          Nearest Tailwind Class
+          Nearest Tailwind CSS Value Finder
         </h1>
         <Link
           href="https://github.com/khulalit"

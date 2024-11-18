@@ -9,8 +9,6 @@ import { ClassToColorMapping } from "@/data/colors";
 
 export const MainArea = () => {
   const { colorClass, originalColor } = useContext(ColorContext);
-
-  console.log(colorClass);
   return (
     <div className="mt-16 text-center">
       <ColorInput />

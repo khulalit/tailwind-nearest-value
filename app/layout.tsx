@@ -15,9 +15,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Tailwind Utility Finder",
+  title: "Find Nearest Tailwind CSS Value - Colors, Spacing, Sizes.",
   description:
-    "Easily find the nearest Tailwind CSS classes for colors, spacing, widths, and heights.",
+    "Easily find the closest Tailwind CSS value for colors, spacing, widths, and heights. Optimize your design with precision using our free tool!",
 };
 
 export default function RootLayout({
