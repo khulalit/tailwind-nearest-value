@@ -7,6 +7,7 @@ import { Header } from "@/components/app-header";
 
 import { ColorProvider } from "@/contexts/app-color-context";
 import { SizeProvider } from "@/contexts/app-size-context";
+import { Analytics } from "@vercel/analytics/react";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} antialiased bg-zinc-800`}>
+        <Analytics />
         <ColorProvider>
           <SizeProvider>
             <div className="max-w-screen max-h-screen overflow-auto rounded-lg bg-white">
