@@ -28,6 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="urDNakr-iwNtaZB1Z_pZAucy1Ylar6tmagsFkqAeY3M"
+        />
+      </head>
       <body className={`${roboto.variable} antialiased bg-zinc-800`}>
         <Analytics />
         <ColorProvider>
