@@ -1,4 +1,5 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+"use client";
+import { Calendar, Home, Inbox } from "lucide-react";
 import Logo from "@/assets/logo.webp";
 
 import {
@@ -11,14 +12,18 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarTrigger,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 // Menu items.
 const items = [
   {
     title: "Find near color",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
@@ -28,12 +33,19 @@ const items = [
   },
   {
     title: "About",
-    url: "#",
+    url: "about",
     icon: Calendar,
   },
 ];
 
 export function AppSidebar() {
+  const { toggleSidebar, state } = useSidebar();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (state === "expanded") toggleSidebar();
+  }, [pathname]);
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -53,10 +65,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
