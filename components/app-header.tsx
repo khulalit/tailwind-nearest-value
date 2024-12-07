@@ -19,12 +19,13 @@ export const Header = () => {
         <h1 className="tracking-wide text-2xl font-semibold mr-auto">
           Nearest Tailwind CSS Value Finder
         </h1>
-        <Link
+        <a
+          target="_blank"
           href="https://github.com/khulalit/tailwind-nearest-value"
           className="bg-teal-600 rounded-full p-2"
         >
           <Github color="white" size="18px" />
-        </Link>
+        </a>
       </div>
     </header>
   );
