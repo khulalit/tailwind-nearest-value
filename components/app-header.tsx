@@ -20,7 +20,7 @@ export const Header = () => {
           Nearest Tailwind CSS Value Finder
         </h1>
         <Link
-          href="https://github.com/khulalit"
+          href="https://github.com/khulalit/tailwind-nearest-value"
           className="bg-teal-600 rounded-full p-2"
         >
           <Github color="white" size="18px" />

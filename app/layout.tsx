@@ -8,6 +8,7 @@ import { Header } from "@/components/app-header";
 import { ColorProvider } from "@/contexts/app-color-context";
 import { SizeProvider } from "@/contexts/app-size-context";
 import { Analytics } from "@vercel/analytics/react";
+import FollowPopup from "@/components/follow-up-popup";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
           <SizeProvider>
             <div className="max-w-screen max-h-screen overflow-auto rounded-lg bg-white">
               <SidebarProvider>
+                <FollowPopup />
                 <Header />
                 <AppSidebar />
                 <main className="w-full b-red-500">{children}</main>
